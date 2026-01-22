@@ -89,17 +89,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Header Scroll Effect
+  // Header Scroll Effect & Floating CTA
   let lastScroll = 0;
   const header = document.querySelector('header');
+  const floatingCta = document.getElementById('floatingCta');
+  const hero = document.querySelector('.hero');
 
   window.addEventListener('scroll', function() {
     const currentScroll = window.pageYOffset;
 
+    // Header shadow effect
     if (currentScroll > 100) {
       header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
     } else {
       header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    }
+
+    // Floating CTA visibility (show after scrolling past hero)
+    if (floatingCta && hero) {
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      if (currentScroll > heroBottom - 100) {
+        floatingCta.classList.add('visible');
+      } else {
+        floatingCta.classList.remove('visible');
+      }
     }
 
     lastScroll = currentScroll;
