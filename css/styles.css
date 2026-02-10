@@ -2,15 +2,17 @@
 /* Mobile-first responsive design */
 
 :root {
-  --primary-navy: #1e3a5f;
-  --accent-green: #3A6B42;
-  --accent-green-dark: #2f5636;
-  --light-gray: #f5f7fa;
-  --text-dark: #333333;
-  --text-light: #666666;
+  --primary-navy: #1a365d;
+  --accent-green: #2e8b3e;
+  --accent-green-dark: #236e30;
+  --accent-orange: #e8762b;
+  --accent-orange-dark: #d06420;
+  --light-gray: #f0f4f8;
+  --text-dark: #2d3748;
+  --text-light: #5a6577;
   --white: #ffffff;
   --success-green: #28a745;
-  --border-color: #e0e0e0;
+  --border-color: #dce3ed;
 }
 
 * {
@@ -360,7 +362,7 @@ nav.desktop-nav > ul > li > a:hover {
   gap: 0.5rem;
   margin: 1rem;
   padding: 1rem;
-  background: var(--accent-green);
+  background: var(--accent-orange);
   color: var(--white);
   font-weight: 600;
   font-size: 1.1rem;
@@ -369,7 +371,7 @@ nav.desktop-nav > ul > li > a:hover {
 }
 
 .mobile-nav .mobile-call-btn:hover {
-  background: var(--accent-green-dark);
+  background: var(--accent-orange-dark);
   color: var(--white);
 }
 
@@ -503,7 +505,7 @@ nav.desktop-nav > ul > li > a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-navy) 0%, #2d5a8f 100%);
+  background: linear-gradient(135deg, #0f2942 0%, #1a4a7a 40%, #1e6040 100%);
   color: var(--white);
   padding: 3rem 20px 4rem;
   text-align: center;
@@ -519,7 +521,7 @@ nav.desktop-nav > ul > li > a:hover {
   right: 0;
   bottom: 0;
   background: url('../images/hero-bg.jpg') center/cover;
-  opacity: 0.1;
+  opacity: 0.15;
   z-index: 0;
 }
 
@@ -535,14 +537,15 @@ nav.desktop-nav > ul > li > a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.5rem 1.25rem;
+  background: rgba(46, 139, 62, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.55rem 1.35rem;
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   backdrop-filter: blur(10px);
+  letter-spacing: 0.3px;
 }
 
 .hero-badge .badge-icon {
@@ -570,6 +573,28 @@ nav.desktop-nav > ul > li > a:hover {
   opacity: 0.85;
 }
 
+/* Hero Logo */
+.hero-logo {
+  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3), 0 0 0 8px rgba(255, 255, 255, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background: var(--white);
+}
+
+.hero-logo-img:hover {
+  transform: scale(1.05);
+}
+
 .hero-cta {
   display: flex;
   flex-direction: column;
@@ -588,19 +613,20 @@ nav.desktop-nav > ul > li > a:hover {
   font-size: 1.15rem;
   font-weight: 700;
   border-radius: 10px;
-  background: var(--accent-green);
+  background: var(--accent-orange);
   color: var(--white);
   border: none;
-  box-shadow: 0 4px 20px rgba(58, 107, 66, 0.5);
+  box-shadow: 0 4px 20px rgba(232, 118, 43, 0.5);
   transition: all 0.3s ease;
   min-width: 280px;
+  letter-spacing: 0.2px;
 }
 
 .btn-cta-primary:hover {
-  background: var(--accent-green-dark);
+  background: var(--accent-orange-dark);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(58, 107, 66, 0.6);
+  box-shadow: 0 6px 25px rgba(232, 118, 43, 0.65);
 }
 
 .btn-cta-primary .btn-icon {
@@ -630,7 +656,7 @@ nav.desktop-nav > ul > li > a:hover {
 
 /* Trust Bar */
 .trust-bar {
-  background: var(--light-gray);
+  background: linear-gradient(90deg, #e8f5e9 0%, #f0f4f8 50%, #e8f5e9 100%);
   padding: 1.25rem 20px;
   border-bottom: 3px solid var(--accent-green);
 }
@@ -712,7 +738,7 @@ nav.desktop-nav > ul > li > a:hover {
   justify-content: center;
   gap: 0.4rem;
   padding: 0.9rem 1rem;
-  background: var(--accent-green);
+  background: var(--accent-orange);
   color: var(--white);
   font-weight: 700;
   font-size: 0.95rem;
@@ -784,18 +810,19 @@ section {
 /* Cards */
 .card {
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
   height: 100%;
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid transparent;
 }
 
 .card:hover {
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   transform: translateY(-4px);
-  border-color: transparent;
+  border-top-color: var(--accent-green);
 }
 
 .card-icon {
@@ -892,9 +919,214 @@ section {
   margin-top: 0.25rem;
 }
 
+/* =====================================================
+   HOMEPAGE QUOTE REQUEST SECTION
+   ===================================================== */
+.quote-request-section {
+  background: linear-gradient(135deg, #f0f7f1 0%, #e3edf7 100%);
+  padding: 4rem 20px;
+}
+
+.quote-request-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.quote-request-info h2 {
+  font-size: 2rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.quote-request-subtitle {
+  font-size: 1.15rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.quote-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.quote-benefits li {
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.quote-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.quote-text-option,
+.quote-call-option {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--white);
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border-color);
+  transition: all 0.25s ease;
+}
+
+.quote-text-option:hover,
+.quote-call-option:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quote-text-icon,
+.quote-call-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.quote-text-option strong,
+.quote-call-option strong {
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.quote-text-option p,
+.quote-call-option p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.btn-text-quote {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--accent-green);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-text-quote:hover {
+  background: var(--accent-green-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-call-quote {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--accent-orange);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-call-quote:hover {
+  background: var(--accent-orange-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.quote-request-form {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color);
+}
+
+.quote-request-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.quote-request-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  font-size: 0.95rem;
+}
+
+.quote-request-form input,
+.quote-request-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-request-form input:focus,
+.quote-request-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(46, 139, 62, 0.15);
+}
+
+.quote-request-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn-submit-quote {
+  display: block;
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--accent-orange);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 118, 43, 0.4);
+  letter-spacing: 0.3px;
+  margin-top: 0.5rem;
+}
+
+.btn-submit-quote:hover {
+  background: var(--accent-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 118, 43, 0.55);
+}
+
+.quote-form-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
 /* CTA Section */
 .cta-section {
-  background: var(--accent-green);
+  background: linear-gradient(135deg, #1a6b2e 0%, #2e8b3e 50%, #1a4a7a 100%);
   color: var(--white);
   text-align: center;
   padding: 4rem 20px;
@@ -999,7 +1231,7 @@ section {
 
 /* Service Areas Section - Homepage */
 .service-areas-section {
-  background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
+  background: linear-gradient(180deg, #e3edf7 0%, var(--light-gray) 50%, var(--white) 100%);
   padding: 4rem 20px;
   text-align: center;
 }
@@ -1041,6 +1273,80 @@ section {
   font-weight: 500;
 }
 
+/* Area Towns Grid */
+.area-towns-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.area-town-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.area-town-card:hover {
+  border-color: var(--accent-green);
+  background: var(--accent-green);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 107, 66, 0.25);
+}
+
+.area-town-card:hover .area-town-name {
+  color: var(--white);
+}
+
+.area-town-card:hover .area-town-icon {
+  filter: brightness(2);
+}
+
+.area-town-home {
+  border-color: var(--accent-green);
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+}
+
+.area-town-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.area-town-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  letter-spacing: -0.2px;
+}
+
+.area-town-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-green);
+  background: rgba(58, 107, 66, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.area-town-home:hover .area-town-label {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+/* Legacy area tags (keep for other pages) */
 .area-tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -1090,6 +1396,14 @@ section {
   line-height: 1.7;
 }
 
+.service-areas-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Pricing Preview Section */
 .pricing-preview {
   background: var(--white);
@@ -1122,7 +1436,8 @@ section {
 .price-card-featured {
   background: var(--white);
   border-color: var(--accent-green);
-  box-shadow: 0 8px 30px rgba(58, 107, 66, 0.15);
+  box-shadow: 0 8px 30px rgba(46, 139, 62, 0.2);
+  transform: scale(1.02);
 }
 
 .price-badge {
@@ -1416,6 +1731,13 @@ footer {
     font-size: 1.25rem;
   }
 
+  .hero-logo-img {
+    width: 170px;
+    height: 170px;
+    border-width: 5px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.15);
+  }
+
   .hero-cta {
     flex-direction: row;
     gap: 1.25rem;
@@ -1445,6 +1767,33 @@ footer {
 
   .areas-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .area-towns-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .area-town-name {
+    font-size: 1.1rem;
+  }
+
+  .service-areas-cta-buttons {
+    flex-direction: row;
+  }
+
+  .quote-request-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .quote-request-info h2 {
+    font-size: 2.25rem;
+  }
+
+  .quote-request-form {
+    padding: 2.25rem;
   }
 }
 
@@ -1503,6 +1852,13 @@ footer {
     font-size: 1.1rem;
   }
 
+  .hero-logo-img {
+    width: 260px;
+    height: 260px;
+    border-width: 6px;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.3), 0 0 0 14px rgba(255, 255, 255, 0.15);
+  }
+
   .btn-cta-primary {
     font-size: 1.2rem;
     padding: 1.15rem 2.25rem;
@@ -1529,6 +1885,19 @@ footer {
 
   .areas-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .area-towns-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .area-town-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .area-town-name {
+    font-size: 1.15rem;
   }
 }
 

@@ -182,11 +182,14 @@
       <h1>Junk Removal in Kerrville, TX</h1>
       <p class="hero-subtitle">Same-Day Pickup&nbsp;&nbsp;•&nbsp;&nbsp;Free Quotes&nbsp;&nbsp;•&nbsp;&nbsp;We Do All the Heavy Lifting</p>
       <p class="hero-location">Serving Kerrville & the Texas Hill Country</p>
+      <div class="hero-logo">
+        <img src="images/logo.png" alt="The Junk Pros Logo" class="hero-logo-img">
+      </div>
       <div class="hero-cta">
         <a href="tel:+18302854281" class="btn btn-cta-primary">
           <span class="btn-icon">📞</span> Call Now: (830) 285-4281
         </a>
-        <a href="contact.html" class="btn btn-cta-secondary">Get Free Quote</a>
+        <a href="#get-quote" class="btn btn-cta-secondary">Get Free Quote</a>
       </div>
     </div>
   </section>
@@ -274,6 +277,66 @@
 
       <div class="text-center mt-3">
         <a href="how-it-works.html" class="btn btn-secondary">Learn More About Our Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Request Section -->
+  <section class="quote-request-section" id="get-quote">
+    <div class="container">
+      <div class="quote-request-wrapper">
+        <div class="quote-request-info">
+          <h2>Need a Junk Removal Quote?</h2>
+          <p class="quote-request-subtitle">Fill Out the Form — It's Free & Takes 30 Seconds!</p>
+          <ul class="quote-benefits">
+            <li>Free, no-obligation quote</li>
+            <li>Same-day service available</li>
+            <li>We do all the heavy lifting</li>
+            <li>Fair, upfront pricing</li>
+          </ul>
+          <div class="quote-text-option">
+            <span class="quote-text-icon">💬</span>
+            <div>
+              <strong>Prefer to Text?</strong>
+              <p>Send us photos of your junk for an instant estimate!</p>
+              <a href="sms:+18302854281?&body=Hi! I'd like a quote for junk removal. Here's what I need removed:" class="btn-text-quote">Text Us: (830) 285-4281</a>
+            </div>
+          </div>
+          <div class="quote-call-option">
+            <span class="quote-call-icon">📞</span>
+            <div>
+              <strong>Want to Talk Now?</strong>
+              <p>Call for an immediate quote!</p>
+              <a href="tel:+18302854281" class="btn-call-quote">Call: (830) 285-4281</a>
+            </div>
+          </div>
+        </div>
+        <div class="quote-request-form">
+          <form action="#" method="POST" id="homepage-quote-form">
+            <div class="form-group">
+              <label for="quote-name">Name *</label>
+              <input type="text" id="quote-name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="quote-email">Email *</label>
+              <input type="email" id="quote-email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="quote-phone">Phone # *</label>
+              <input type="tel" id="quote-phone" name="phone" required placeholder="(830) 555-1234">
+            </div>
+            <div class="form-group">
+              <label for="quote-address">Address *</label>
+              <input type="text" id="quote-address" name="address" required placeholder="Street address and city">
+            </div>
+            <div class="form-group">
+              <label for="quote-description">Junk Description *</label>
+              <textarea id="quote-description" name="description" required placeholder="What do you need removed? (e.g., old couch, garage full of junk, construction debris...)"></textarea>
+            </div>
+            <button type="submit" class="btn-submit-quote">Get My Free Quote</button>
+            <p class="quote-form-note">We'll respond within 2 hours during business hours.</p>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -408,8 +471,8 @@
   <section class="service-areas-section">
     <div class="container">
       <div class="section-title">
-        <h2>Proudly Serving Kerrville & the Hill Country</h2>
-        <p>Fast, reliable junk removal throughout the Texas Hill Country region</p>
+        <h2>We Come to You — All Across the Hill Country</h2>
+        <p>Don't assume we're too far — if you're in the Hill Country, we've got you covered!</p>
       </div>
 
       <div class="service-areas-highlight">
@@ -422,21 +485,72 @@
         </div>
       </div>
 
-      <div class="area-tags-container">
-        <a href="areas/ingram.html" class="area-tag">Ingram</a>
-        <a href="areas/fredericksburg.html" class="area-tag">Fredericksburg</a>
-        <a href="areas/boerne.html" class="area-tag">Boerne</a>
-        <a href="areas/bandera.html" class="area-tag">Bandera</a>
-        <a href="areas/comfort.html" class="area-tag">Comfort</a>
-        <a href="areas/hunt.html" class="area-tag">Hunt</a>
-        <a href="areas/center-point.html" class="area-tag">Center Point</a>
-        <a href="areas/canyon-lake.html" class="area-tag">Canyon Lake</a>
-        <a href="areas/index.html" class="area-tag area-tag-more">+6 More Areas</a>
+      <div class="area-towns-grid">
+        <a href="areas/kerrville.html" class="area-town-card area-town-home">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Kerrville</span>
+          <span class="area-town-label">Home Base</span>
+        </a>
+        <a href="areas/ingram.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Ingram</span>
+        </a>
+        <a href="areas/hunt.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Hunt</span>
+        </a>
+        <a href="areas/center-point.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Center Point</span>
+        </a>
+        <a href="areas/comfort.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Comfort</span>
+        </a>
+        <a href="areas/bandera.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Bandera</span>
+        </a>
+        <a href="areas/medina.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Medina</span>
+        </a>
+        <a href="areas/harper.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Harper</span>
+        </a>
+        <a href="areas/junction.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Junction</span>
+        </a>
+        <a href="areas/mountain-home.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Mountain Home</span>
+        </a>
+        <a href="areas/leakey.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Leakey</span>
+        </a>
+        <a href="areas/fredericksburg.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Fredericksburg</span>
+        </a>
+        <a href="areas/boerne.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Boerne</span>
+        </a>
+        <a href="areas/canyon-lake.html" class="area-town-card">
+          <span class="area-town-icon">📍</span>
+          <span class="area-town-name">Canyon Lake</span>
+        </a>
       </div>
 
       <div class="service-areas-cta">
-        <p>Based in Kerrville, we serve the entire Hill Country region including Fredericksburg, Boerne, Bandera, Comfort, Ingram, Hunt, and many more communities throughout Kerr County and beyond.</p>
-        <a href="areas/index.html" class="btn btn-secondary">View All Service Areas</a>
+        <p>Based in Kerrville, we proudly serve the entire Hill Country. <strong>Not sure if we reach your area? Just call — chances are, we do!</strong></p>
+        <div class="service-areas-cta-buttons">
+          <a href="tel:+18302854281" class="btn btn-primary">Call Us: (830) 285-4281</a>
+          <a href="areas/index.html" class="btn btn-outline">View All Service Areas</a>
+        </div>
       </div>
     </div>
   </section>
