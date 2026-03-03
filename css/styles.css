@@ -1954,3 +1954,57 @@ footer {
 
 .bg-light { background: var(--light-gray); }
 .bg-white { background: var(--white); }
+
+/* =====================================================
+   GOOGLE REVIEWS WIDGET (Trustindex)
+   ===================================================== */
+.reviews-widget-section {
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.reviews-widget-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-navy);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.reviews-widget-container {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trustindex widget styling overrides for better integration */
+.reviews-widget-container > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .reviews-widget-section {
+    margin-top: 4rem;
+    padding-top: 3.5rem;
+  }
+
+  .reviews-widget-title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .reviews-widget-section {
+    margin-top: 4.5rem;
+  }
+
+  .reviews-widget-title {
+    font-size: 1.85rem;
+  }
+}
