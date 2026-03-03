@@ -1,0 +1,10 @@
+# robots.txt for The Junk Pros
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kerrvillejunk.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
