@@ -1,4 +1,4 @@
-// The Junk Pros - Main JavaScript
+// Steady Flame Hauling and Junk Removal - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
 
