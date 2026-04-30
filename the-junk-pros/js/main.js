@@ -1,4 +1,4 @@
-// The Junk Pros - Main JavaScript
+// Steady Flame Hauling and Junk Removal - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -7,9 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileNav = document.querySelector('.mobile-nav');
 
   if (mobileMenuToggle && mobileNav) {
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    mobileMenuToggle.setAttribute('aria-controls', 'mobile-navigation');
+    mobileNav.setAttribute('id', 'mobile-navigation');
+
     mobileMenuToggle.addEventListener('click', function() {
       this.classList.toggle('active');
       mobileNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', mobileNav.classList.contains('active') ? 'true' : 'false');
     });
 
     // Close mobile menu when clicking outside
@@ -17,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
         mobileMenuToggle.classList.remove('active');
         mobileNav.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
       }
     });
 
@@ -25,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function() {
         mobileMenuToggle.classList.remove('active');
         mobileNav.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -33,6 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
 
   mobileDropdownToggles.forEach(toggle => {
+    toggle.setAttribute('role', 'button');
+    toggle.setAttribute('tabindex', '0');
+    toggle.setAttribute('aria-expanded', 'false');
+
+    toggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+
     toggle.addEventListener('click', function(e) {
       e.stopPropagation();
       const content = this.nextElementSibling;
@@ -42,11 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (otherToggle !== this) {
           otherToggle.classList.remove('active');
           otherToggle.nextElementSibling?.classList.remove('active');
+          otherToggle.setAttribute('aria-expanded', 'false');
         }
       });
 
       this.classList.toggle('active');
       content?.classList.toggle('active');
+      this.setAttribute('aria-expanded', this.classList.contains('active') ? 'true' : 'false');
     });
   });
 
@@ -100,9 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header shadow effect
     if (currentScroll > 100) {
-      header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+      header.style.boxShadow = '0 14px 34px rgba(5,6,4,0.28)';
     } else {
-      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+      header.style.boxShadow = '0 10px 30px rgba(5,6,4,0.22)';
     }
 
     // Floating CTA visibility (show after scrolling past hero)
