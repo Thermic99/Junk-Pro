@@ -176,6 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!isValid) {
         e.preventDefault();
         alert('Please fill in all required fields correctly.');
+        return;
+      }
+
+      if (this.matches('[data-whatsapp-quote-form]')) {
+        e.preventDefault();
+        openWhatsAppQuote(this);
       }
     });
 
@@ -238,6 +244,49 @@ function isValidEmail(email) {
 function isValidPhone(phone) {
   const re = /^[\d\s\-\(\)]+$/;
   return re.test(phone) && phone.replace(/\D/g, '').length >= 10;
+}
+
+function openWhatsAppQuote(form) {
+  const whatsappNumber = '18302854281';
+  const source = form.dataset.whatsappSource || 'Website';
+  const fields = Array.from(form.elements).filter(field => {
+    if (!field.name || field.disabled) return false;
+    if (field.type === 'submit' || field.type === 'button' || field.type === 'hidden') return false;
+    if ((field.type === 'radio' || field.type === 'checkbox') && !field.checked) return false;
+    return field.value && field.value.trim();
+  });
+
+  const lines = [
+    'Hi, I would like a junk removal quote.',
+    '',
+    `Source: ${source}`
+  ];
+
+  fields.forEach(field => {
+    lines.push(`${getFieldLabel(field)}: ${getFieldValue(field)}`);
+  });
+
+  lines.push('', 'Please let me know the next steps. Thank you!');
+  window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join('\n'))}`;
+}
+
+function getFieldLabel(field) {
+  const label = field.id ? document.querySelector(`label[for="${field.id}"]`) : null;
+  const fallback = field.name.replace(/[-_]/g, ' ');
+  return label ? label.textContent.replace('*', '').trim() : fallback.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function getFieldValue(field) {
+  if (field.tagName === 'SELECT') {
+    return field.options[field.selectedIndex]?.text || field.value;
+  }
+
+  if (field.type === 'radio') {
+    const optionLabel = field.closest('label');
+    return optionLabel ? optionLabel.textContent.trim() : field.value;
+  }
+
+  return field.value.trim();
 }
 
 // Track Conversions (placeholder for analytics)
