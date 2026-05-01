@@ -1075,7 +1075,7 @@ section {
 }
 
 .quote-request-form {
-  background: #000
+  background: #050604;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -2311,6 +2311,24 @@ nav.desktop-nav > ul > li > a:hover,
   letter-spacing: 0.015em;
 }
 
+.hero-slogan {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  background: var(--brand-lime);
+  color: #050604;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(115, 217, 20, 0.34);
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
 .hero .hero-subtitle {
   max-width: 760px;
   color: #f3f5f1;
@@ -2725,6 +2743,7 @@ footer {
 
   .hero-badge,
   .hero h1,
+  .hero-slogan,
   .hero .hero-subtitle,
   .hero .hero-location,
   .hero-transition,
@@ -2790,10 +2809,16 @@ footer {
   }
 
   .hero-badge,
+  .hero-slogan,
   .hero-logo,
   .hero-cta {
     justify-self: center;
     align-items: center;
+  }
+
+  .hero-slogan {
+    font-size: 1.9rem;
+    max-width: 100%;
   }
 
   .hero-logo {
