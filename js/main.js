@@ -1,4 +1,4 @@
-// The Junk Pros - Main JavaScript
+// Steady Flame Hauling and Junk Removal - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -233,6 +233,41 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     trackConversion('phone_call');
   });
 });
+
+
+// WhatsApp quote form delivery
+const whatsappQuoteForm = document.getElementById('whatsappQuoteForm');
+
+if (whatsappQuoteForm) {
+  whatsappQuoteForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!whatsappQuoteForm.checkValidity()) {
+      whatsappQuoteForm.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(whatsappQuoteForm);
+    const preferredContact = formData.get('contact-method') || 'phone';
+    const messageLines = [
+      'New quote request from kerrvillejunk.com',
+      '',
+      `Name: ${formData.get('name') || ''}`,
+      `Phone: ${formData.get('phone') || ''}`,
+      `Email: ${formData.get('email') || 'Not provided'}`,
+      `Service Address: ${formData.get('address') || ''}`,
+      `Service Type: ${formData.get('service') || ''}`,
+      `Timeline: ${formData.get('timeline') || ''}`,
+      `Preferred Contact: ${preferredContact}`,
+      '',
+      'Project Details:',
+      formData.get('details') || ''
+    ];
+
+    const message = encodeURIComponent(messageLines.join('\n'));
+    window.location.href = `https://wa.me/18302854281?text=${message}`;
+  });
+}
 
 // Form submission tracking
 document.querySelectorAll('form').forEach(form => {
