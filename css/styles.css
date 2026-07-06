@@ -2854,3 +2854,49 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================================================
+   TEMPORARY CLOSURE BANNER & NOTICE
+   ===================================================== */
+
+.temp-closed-banner {
+  background-color: var(--brand-lime, #83e51c);
+  color: #000;
+  text-align: center;
+  padding: 12px 24px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  z-index: 10000;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.temp-closed-banner strong {
+  font-weight: 700;
+}
+
+/* Notice label inside forms */
+.form-pause-notice {
+  background-color: rgba(27, 94, 32, 0.05);
+  border: 1px solid rgba(27, 94, 32, 0.15);
+  color: #1c1f1a;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  border-left: 4px solid #2e7d32;
+  text-align: left;
+}
+
+.form-pause-notice strong {
+  color: #1b5e20;
+  font-weight: 700;
+}
