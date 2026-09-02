@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/the-junk-pros",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/the-junk-pros/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    }
+  ]
+}

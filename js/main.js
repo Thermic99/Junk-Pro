@@ -2,24 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Dynamic Temporary Closure Banner Injection
-  {
-    const banner = document.createElement('div');
-    banner.className = 'temp-closed-banner';
-    banner.innerHTML = '📢 <strong>Notice:</strong> We are temporarily closed while our team is out of town. You can still submit quote requests below and we will contact you upon our return!';
-    document.body.prepend(banner);
-
-    // Dynamic Form Pause Notice Injection
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      if (form.querySelector('.form-pause-notice')) return;
-      const notice = document.createElement('div');
-      notice.className = 'form-pause-notice';
-      notice.innerHTML = '<strong>Important Notice:</strong> We are temporarily closed while our team is out of town. We are not scheduling jobs right now, but you can submit your request to queue up for when we return.';
-      form.insertBefore(notice, form.firstChild);
-    });
-  }
-
   // Mobile Menu Toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
