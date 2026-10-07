@@ -1,5 +1,16 @@
 // Steady Flame Hauling and Junk Removal - Main JavaScript
 
+const GA_MEASUREMENT_ID = 'G-KLQBTVM6S5';
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+window.gtag = window.gtag || gtag;
+gtag('js', new Date());
+gtag('config', GA_MEASUREMENT_ID);
+const gaScript = document.createElement('script');
+gaScript.async = true;
+gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+document.head.appendChild(gaScript);
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Mobile Menu Toggle
@@ -291,9 +302,7 @@ function getFieldValue(field) {
 
 // Track Conversions (placeholder for analytics)
 function trackConversion(action) {
-  console.log('Conversion tracked:', action);
-  // Add Google Analytics or other tracking here
-  // gtag('event', 'conversion', { 'send_to': 'AW-XXXXX/XXXXX', 'value': 1.0, 'currency': 'USD' });
+  window.gtag('event', action, { event_category: 'engagement' });
 }
 
 // Call tracking
