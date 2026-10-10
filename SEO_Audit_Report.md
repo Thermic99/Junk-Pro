@@ -1,51 +1,32 @@
-# Website Audit & SEO Ranking: The Junk Pros
+# Website SEO audit — Steady Flame Hauling and Junk Removal
 
-## Overall Rank: **A (92/100)**
+**Audit date:** October 10, 2026  
+**Website:** https://www.kerrvillejunk.com/  
+**Evidence:** GSC Wizard crawl of five important pages, live HTTP headers, repository files, and public Google results. This is a sampled technical audit, not a ranking guarantee or a full content review.
 
-The website is well-architected for local SEO, with a strong focus on the target market (Kerrville/Hill Country). The content is readable, trust-building, and technically sound. It is securely in the top 10% of local business websites in terms of on-page optimization foundation.
+## Findings
 
-### 🏆 Score Breakdown
+- **Host and canonical mismatch:** All five sampled www pages returned HTTP 200 but declared canonicals on the non-www host. A live request to the non-www homepage returned HTTP 307 to https://www.kerrvillejunk.com/, so the canonical target redirected back to www. The draft aligns page canonicals, structured-data URLs, robots.txt, and sitemap URLs to the final host.
+- **Sitemap dates were stale:** The static sitemap used the same September 2, 2026 last-modified date across its pages. The draft removes those dates instead of asserting unverified updates.
+- **Thank-you page was in the sitemap:** The confirmation page already carries noindex; the draft removes it from the sitemap.
+- **Review markup was outdated and ineligible:** LocalBusiness JSON-LD repeated an aggregate of 47 reviews; the public profile displayed 31 on the audit date. Google does not show self-serving LocalBusiness review snippets for a business's own site, so the draft removes this aggregate. The visible review widget is unchanged.
+- **GBP details need owner confirmation:** Google showed the profile as “The Junk Pros Kerrville,” with 31 reviews, a 5.0 rating, and junk-removal-related categories. The signed-in panel said more verification information was required before edits would be visible. Google showed no phone number; the website lists (830) 285-4281. Google showed “Open · Closes 6 PM,” while the website source says 7 AM–7 PM daily. Confirm the current name, phone, and hours with the owners before changing either source.
+- **Claims to confirm:** The site describes same-day service, free estimates, and eco-friendly disposal. Confirm these remain accurate before using them in new content or GBP copy.
 
-| Category | Score | Details |
-| :--- | :--- | :--- |
-| **On-Page SEO** | **9.5/10** | Excellent title/meta tags, H1 hierarchy, and keyword usage. Canonical tags present. |
-| **Local SEO** | **10/10** | Best-in-class usage of local landmarks (Schreiner Univ., Guadalupe River) and specific service areas. |
-| **Technical SEO** | **8.5/10** | Schema markup (JSON-LD) is correctly implemented. Sitemap/robots.txt are perfect. Missing Open Graph tags. |
-| **Readability** | **10/10** | Clear, scanable content with bullet points, short paragraphs, and clear CTAs. |
-| **Trust Factors** | **9/10** | Prominent phone numbers, testimonials, and "Why Choose Us" values. |
+## Pages sampled
 
----
+Homepage, services hub, Kerrville area page, contact page, and pricing page. All five returned HTTP 200 and had an H1. The crawler reported them as canonicalised because the canonical host differed from the requested www URL; this alone does not establish that their non-www counterparts are missing from Google's index.
 
-## 🔍 Detailed Findings
+## Measurement baseline
 
-### 1. Strengths (What you did right)
-*   **Local Content is King:** The `areas/kerrville.html` page is a perfect example of non-generic content. Mentioning local landmarks *significantly* helps with relevance signals to Google.
-*   **Schema Markup:** You have `LocalBusiness` schema on the homepage and location pages, plus `BreadcrumbList`. This is often missed by competitors and gives you a "rich results" advantage.
-*   **Mobile-First Navigation:** The mobile menu structure (with "Tap to Call") is excellent for a service business.
-*   **Internal Linking:** The "Areas We Serve" and "Services" footer links create a strong crawl path for spiders.
-*   **Performance Ready:** You are using minimal external scripts (just fonts), which suggests the site will load extremely fast.
+- Search Console reported 145 impressions and 1 click in its latest 28-day view through October 6, 2026. The preceding comparison had no data, so this is a starting baseline rather than a growth result.
+- Queries included junk removal Kerrville, junk removal Canyon Lake, and Spring Branch junk removal. It also showed unrelated hazardous-material queries; do not target asbestos or lead-paint removal unless the company confirms it offers those services.
+- GA4 recorded 3 sessions and 9 events from September 10 through October 7, 2026, with no lead key events in that period. The property is new, so this is an early baseline.
 
-### 2. Missing Elements (Immediate Fixes)
-While the site is great, adding these will push it to a **98/100**:
+## Owner actions
 
-*   **Social Media Meta Tags (Open Graph):** Use these to control how links look when shared on Facebook/Twitter/Text.
-    *   *Missing:* `<meta property="og:title" ... />`, `<meta property="og:image" ... />`
-*   **Favicon:** Ensure you have a `favicon.ico` or `icon.png` linked in the `<head>`.
-*   **Image Dimensions:** The logo `<img>` tags lack explicit `width` and `height` attributes. This causes "Cumulative Layout Shift" (CLS), which hurts Google rankings.
-    *   *Fix:* Add `width="250" height="80"` (or actual dimensions) to image tags.
-
-### 3. Readability & User Experience (UX)
-*   **Flesch-Kincaid Grade Level:** ~8th Grade (Optimal for general public).
-*   **Call to Actions (CTAs):** Excellent placement. The "Sticky" nature of the header (implied by structure) with a phone number is crucial.
-*   **Trust Signals:** The "Stats Bar" and "Trust Badges" above the fold on the homepage are highly effective.
-
----
-
-## 🚀 Recommended Next Steps
-
-1.  **Add Open Graph Tags:** I can add these to the `<head>` of your templates.
-2.  **Fix Image CLS:** Add explicit width/height to your logo and main images.
-3.  **Validate Links:** Ensure `tel:` links are working (they look correct in code).
-4.  **Deployment:** When deploying to Cloudflare Pages (as mentioned in instructions), ensure SSL is active (it is by default).
-
-**Verdict:** This is a professional-grade local business site. It is ready for deployment after the minor "social sharing" fixes.
+1. Complete Google Business Profile verification.
+2. Confirm the public business name, phone, weekly hours, service area, and accepted services.
+3. After confirmation, set the profile website link to https://www.kerrvillejunk.com/ once the site changes are deployed.
+4. Confirm which towns are genuinely served before expanding or rewriting location pages.
+5. Confirm whether same-day service, free estimates, and eco-friendly disposal accurately describe current operations.

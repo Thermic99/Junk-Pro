@@ -1,39 +1,27 @@
-# Google Business Profile Rebrand Checklist (Draft)
+# Google Business Profile audit and update checklist
 
-## Important constraints
-- Do **not** create a new GBP listing.
-- Do **not** change phone number.
-- Do **not** publish changes without owner approval.
+**Observed:** October 10, 2026  
+**Profile shown:** The Junk Pros Kerrville  
+**Website brand:** Steady Flame Hauling and Junk Removal, formerly Junk Pros
 
-## Business profile updates
-- [ ] Update Business Name to: **Steady Flame Hauling and Junk Removal**
-- [ ] Keep primary category as: **Junk Removal Service**
-- [ ] Keep service area unchanged unless owner provides updates
-- [ ] Keep hours unchanged unless owner provides updates
-- [ ] Keep website URL unchanged: `https://kerrvillejunk.com/`
-- [ ] Keep primary phone unchanged: `(830) 285-4281`
+## Current findings
 
-## Description draft (non-spammy)
-Steady Flame Hauling and Junk Removal (formerly Junk Pros) provides fast, reliable junk removal, hauling, and cleanout services across Kerrville and the Texas Hill Country. Same trusted team, same phone number, and the same commitment to straightforward, dependable service. Just Call - We Haul.
+- The signed-in Google panel says additional information is required to verify profile management; profile edits will be visible after verification.
+- Public listing title: The Junk Pros Kerrville.
+- Public listing phone: not shown. The website lists (830) 285-4281; ask the owners to confirm before changing GBP.
+- Public profile shows 31 Google reviews and categories including Junk removal service, Service establishment, and Waste management service.
+- The public profile showed “Open · Closes 6 PM”; the website source currently lists 7 AM–7 PM, seven days a week. Confirm the full current schedule before editing either source.
+- The GBP website link is the non-www URL, which currently redirects to https://www.kerrvillejunk.com/. The website draft aligns canonical and sitemap URLs to that final host.
+- The profile description names Steady Flame Hauling and Junk Removal while the listing title remains The Junk Pros Kerrville. Confirm the official public-facing name and whether the owners want the profile name updated.
 
-## Media updates
-- [ ] Upload new primary logo
-- [ ] Upload one branded image containing the tagline: **Just Call - We Haul**
-- [ ] Add recent service photos (crew, truck, before/after)
-- [ ] Leave legacy photos in place during transition unless inaccurate
+## After profile verification and owner confirmation
 
-## GBP post draft (hold for final approval)
-**Junk Pros is now Steady Flame Hauling and Junk Removal.**
-Same reliable hauling and junk removal service, same phone number, new name and look. **Just Call - We Haul.**
+- [ ] Confirm the business name as it appears on signage and business records.
+- [ ] Confirm phone number, full weekly hours, service area, and accepted services.
+- [ ] Set the profile website link to https://www.kerrvillejunk.com/ after the site change is deployed.
+- [ ] Confirm the primary category accurately describes the business; retain or adjust additional categories only when accurate.
+- [ ] Confirm the description contains only current services and claims.
+- [ ] Review services, service areas, photos, and hours for factual accuracy.
+- [ ] Ask customers neutrally for honest reviews; do not offer incentives or request specific keywords.
 
-## Monitoring plan (first 4–8 weeks)
-- [ ] Weekly check: calls from GBP
-- [ ] Weekly check: GBP profile views/impressions
-- [ ] Weekly check: website clicks from GBP
-- [ ] Weekly check: direction requests
-- [ ] Track map-pack ranking for core terms:
-  - junk removal kerrville
-  - hauling kerrville
-  - estate cleanout kerrville
-  - furniture removal kerrville
-- [ ] If performance dips, tighten NAP consistency across website + major citations
+Do not create a second profile. Do not attempt profile edits until verification permits changes.
