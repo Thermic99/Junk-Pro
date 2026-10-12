@@ -305,10 +305,10 @@ function trackConversion(action) {
   window.gtag('event', action, { event_category: 'engagement' });
 }
 
-// Call tracking
+// Phone-link click tracking
 document.querySelectorAll('a[href^="tel:"]').forEach(link => {
   link.addEventListener('click', function() {
-    trackConversion('phone_call');
+    trackConversion('phone_link_click');
   });
 });
 
