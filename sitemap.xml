@@ -146,12 +146,6 @@
   </url>
 
   <url>
-    <loc>https://www.kerrvillejunk.com/areas/junction.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://www.kerrvillejunk.com/areas/mountain-home.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -262,4 +256,6 @@
     <priority>0.7</priority>
   </url>
 
+  <url><loc>https://www.kerrvillejunk.com/estate-cleanout-checklist.html</loc></url>
+  <url><loc>https://www.kerrvillejunk.com/junk-removal-questions.html</loc></url>
 </urlset>
