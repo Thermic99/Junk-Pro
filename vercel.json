@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/services/junk-car-removal.html",
+      "destination": "/services/index.html",
+      "permanent": true
+    },
+    {
       "source": "/areas/junction.html",
       "destination": "/areas/index.html",
       "permanent": true
